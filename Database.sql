@@ -31,6 +31,9 @@ create table Article(
     on delete cascade,
     constraint Category foreign key (CatID) references Category(ID)
     on delete cascade
+    Auth varchar(50)
+    constraint Author foreign key(Auth) references Journalist(Username)
+    on update cascade
 );
 
 create table Worker(
